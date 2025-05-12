@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBlUw2Z6b4Ox_dFI2pVaeKDRGeXEe3lA7ekw&s'); /* Replace with your actual image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+        </form>
+        <button onclick="goToHomePage()">Back</button>
+        <button onclick="goToMenuPage()">login</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const storedUser = localStorage.getItem("username");
+            const storedPass = localStorage.getItem("password");
+
+            if (username === storedUser && password === storedPass) {
+                document.getElementById("message").textContent = "Login Successful!";
+                document.getElementById("message").style.color = "green";
+                window.location.href = "home"; // Redirect to main page            
+            } else {
+                document.getElementById("message").textContent = "Invalid username or password!";
+                document.getElementById("message").style.color = "red";
+            }
+        });
+        function goToHomePage() {
+            window.location.href = "home"; // Replace with actual home page URL
+        }
+        function goToMenuPage() {
+            window.location.href = "menu"; // Replace with actual home page URL
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .menu-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Menu</h1>
+    <div class="menu-section">
+        <h2>Vegetarian Items</h2>
+        <div class="item">
+            <div>
+                <h3>Paneer Butter Masala</h3>
+                <p>Cost: ₹250</p>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc-WJCpv9HtDZuIrdAHm5QtrlS3RihkCkATg&s" alt="Paneer Butter Masala" onclick="showDiet('Paneer Butter Masala')">     
+           </div>
+        <div class="item">
+            <div>
+                <h3>Veg Biryani</h3>
+                <p>Cost: ₹200</p>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl-2J0wbU6uz7vfN0TXGvrNM-zr69QWVxX9g&s" alt="Veg Biryani"  onclick="showDiet('Veg Biryani')">
+        </div>
+         <div class="item">
+            <div>
+                <h3>Parota</h3>
+                <p>Cost: ₹50</p>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DXeiGVH16zcdi44wrYM2GSGXjDzWs35sug&s" alt="Parota" onclick="showDiet('Parota')">     
+            </div>
+             <div class="item">
+            <div>
+                <h3>Veg FriedRice</h3>
+                <p>Cost: ₹180</p>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-H91zbV-zMvvgsUA-tglc8qfKiogwNKdg0Q&s" alt="Veg FriedRice" onclick="showDiet('Veg FriedRice')">     
+            </div>
+            <div class="item">
+                <div>
+                    <h3>Veg Noodles</h3>
+                    <p>Cost: ₹150</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgMSCYxWNnEave6VKRzm4tZCAW0CxrSiZCag&s" alt="Veg Noodles" onclick="showDiet('Veg Noodles')">     
+               </div>
+               <div class="item">
+                <div>
+                    <h3>Gobhi Manchurya</h3>
+                    <p>Cost: ₹60</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6hzuDMlhsPfVPsCrIWJ0xGSGoxhMX_wQ89g&s" alt="Gobhi Manchurya" onclick="showDiet('Gobhi Manchurya')">     
+               </div>
+               <div class="item">
+                <div>
+                    <h3>Chole Masala</h3>
+                    <p>Cost: ₹100</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuxP7sXRNWUAIJcTMF8sOR2CBP6C9xUmq6FQ&s" alt="Chole Masala"  onclick="showDiet('Chole Masala')">
+            </div>
+            <div class="item">
+                <div>
+                    <h3>Jeera Rice</h3>
+                    <p>Cost: ₹70</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdk2fF5ANVtTzZoX20w5W_uuw8_qrD-Xd2XA&s" alt="Jeera Rice" onclick="showDiet('Jeera Rice')">     
+               </div>
+               
+               
+            
+
+            
+    </div>
+
+    <div class="menu-section">
+        <h2>Non-Vegetarian Items</h2>
+        <div class="item">
+            <div>
+                <h3>Chicken Biryani</h3>
+                <p>Cost: ₹300</p>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp0anaBd2x7-86JoXdY3dLxC_nPf7ljrjkXQ&s" alt="Chicken Biryani" onclick="showDiet('Chicken Biryani')">
+        </div>
+        <div class="item">
+            <div>
+                <h3>Fish Curry</h3>
+                <p>Cost: ₹350</p>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDPWEEFC1xacWAGNi-1ADpkAd7C4T9M7Ja3A&s" alt="Fish Curry" onclick="showDiet('Chicken Biryani')">
+        </div>
+        <div class="item">
+            <div>
+                <h3>Prawns fry</h3>
+                <p>Cost: ₹370</p>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaMdZiW0QSoWtz9S3xilSSJ2DW_wSo0yfbXQ&s" alt="Prawns fry" onclick="showDiet('Prawns fry')">
+        </div>
+            <div class="item">
+                <div>
+                    <h3>Tandori chicken</h3>
+                    <p>Cost: ₹270</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPGmA9_Gf8yJuU70gcGE3x-K9FVQbe-Qg0fQ&s" alt="Tandori chicken" onclick="showDiet('Tandori chicken')">     
+            </div>
+            <div class="item">
+                <div>
+                    <h3>Egg Curry</h3>
+                    <p>Cost: ₹70</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZxPveSVbbf5gPHmHFVpvIOsXilD6-J3vEQw&s" alt="Egg Curry" onclick="showDiet('Egg Curry')">     
+            </div>
+            <div class="item">
+                <div>
+                    <h3>Fish Fingers</h3>
+                    <p>Cost: ₹400</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjc7vL293WNMEIykExSuMkvnYorl-pc-1qA&s" alt="Fish Fingers" onclick="showDiet('Fish Fingers')">     
+            </div>
+            <div class="item">
+                <div>
+                    <h3>Chicken 65</h3>
+                    <p>Cost: ₹380</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc7dGQndZwDJKTmzB3dE55UYja2qHm-bchOA&s" alt="Chicken 65" onclick="showDiet('Chicken 65')">     
+            </div>
+            <div class="item">
+                <div>
+                    <h3>chicken lollipop</h3>
+                    <p>Cost: ₹180</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkocN7bUSnNc2evO-xozTt-iM0e4Cf6hUkrg&s" alt="chicken lollipop" onclick="showDiet('chicken lollipop')">     
+            </div>
+
+        
+    </div>
+    <script>
+        function showDiet(food) {
+            window.location.href = `diet?item=${encodeURIComponent(food)}`;
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Button</title>
+    <style>
+        .redirect-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .redirect-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the Button to Go to Location Page</h1>
+    <button class="redirect-button" onclick="goToLocation()">Go to Location</button>
+
+    <script>
+        function goToLocation() {
+            window.location.href = 'Location';
+        }
+    </script>
+</body>
+</html>
+

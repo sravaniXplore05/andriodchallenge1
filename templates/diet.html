@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanced Diet Info</title>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: linear-gradient(to right, #C71585, #FFD700, #007BFF); /* Mixed color background */
+        }
+        .diet-info {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: inline-block;
+        }
+        .nav-button {
+            margin-top: auto;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            width: 150px; /* Limits button width */
+            text-align: center; /* Centers text inside the button */
+        }
+        .nav-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Balanced Diet Information</h1>
+    <div class="diet-info">
+        <h2 id="food-name"></h2>
+        <p>Carbohydrates: <span id="carbs"></span>%</p>
+        <p>Proteins: <span id="proteins"></span>%</p>
+        <p>Fats: <span id="fats"></span>%</p>
+        <p>vitamins: <span id="vitamins"></span>%<p>
+        <p>calories: <span id="calories"></span>%<p>
+
+    </div>
+    <button class="nav-button" onclick="goToMenu()">Go to Menu</button>
+
+    <script>
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const foodItem = getQueryParam('item');
+        document.getElementById('food-name').innerText = foodItem;
+
+        const dietData = {
+            "Paneer Butter Masala": { carbs: 45, proteins: 25, fats: 30, vitamins: 20 ,calories:10},
+            "Veg Biryani": { carbs: 55, proteins: 20, fats: 25 ,vitamins: 11 ,calories:30},
+            "Parota": { carbs: 10, proteins: 30, fats: 20 ,vitamins: 20 ,calories:40},
+            "Veg FriedRice":{ carbs: 50, proteins: 10, fats: 15,vitamins: 32 ,calories:10 },
+            "Veg Noodles": { carbs: 30, proteins: 40, fats: 20 ,vitamins: 30 ,calories:10},
+            "Gobhi Manchurya": { carbs: 35, proteins: 13, fats: 45 ,vitamins: 12 ,calories:20},
+            "Chole Masala": { carbs: 40, proteins: 20, fats: 15 ,vitamins: 30 ,calories:23},
+            "Jeera Rice": { carbs: 15, proteins: 12, fats: 15 ,vitamins: 40 ,calories:20},
+            "Chicken Biryani": { carbs: 35, proteins: 15, fats: 20,vitamins: 26 ,calories:10 },
+            "Fish Curry": { carbs: 20, proteins: 33, fats: 34 ,vitamins: 4 ,calories:40},
+            "Prawns fry": { carbs: 10, proteins: 25, fats: 20 ,vitamins: 16 ,calories:30},
+            "Tandori chicken": { carbs: 20, proteins: 11, fats: 20,vitamins: 25 ,calories:20 },
+            "Egg Curry": { carbs: 17, proteins: 14, fats: 20 ,vitamins: 2 ,calories:4},
+
+            "Fish Fingers": { carbs: 15, proteins: 40, fats: 30 ,vitamins: 11 ,calories:5},
+            "Chicken 65": { carbs: 30, proteins: 10, fats: 3 ,vitamins: 15 ,calories:17},
+            "chicken lollipop": { carbs: 25, proteins: 10, fats: 4 ,vitamins: 5 ,calories:10},
+
+        };
+
+        if (dietData[foodItem]) {
+            document.getElementById('carbs').innerText = dietData[foodItem].carbs;
+            document.getElementById('proteins').innerText = dietData[foodItem].proteins;
+            document.getElementById('fats').innerText = dietData[foodItem].fats;
+            document.getElementById('vitamins').innerText = dietData[foodItem].vitamins;
+            document.getElementById('calories').innerText = dietData[foodItem].calories;
+        } else {
+            document.querySelector('.diet-info').innerHTML = "<p>No diet information available for this item.</p>";
+        }
+
+        function goToMenu() {
+            window.location.href = "/menu/";
+        }
+    </script>
+</body>
+</html>
