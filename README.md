@@ -28,8 +28,7 @@
 - SQLite (default Django DB)
 
 ## How to Run Locally
-
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/7-spices-django.git
-   cd 7-spices-django
+   git clone https://github.com/sravaniXplore05/andriodchallenge1.git
+   
